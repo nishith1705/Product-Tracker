@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Page</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.feedback-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-image: url('./Rating-Star-PNG-Free-Download.png'); /* Replace with your star image */
+    background-size: cover;
+}
+ .rating input:checked + label {
+    background-image: url('./star_PNG41472.png') no-repeat; /* Replace with your gold star image */
+} 
+
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+.rating{
+    color: gold;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="feedback-container">
+        <h1>Feedback Page</h1>
+        <p>Please rate your experience:</p>
+
+        <div class="rating">
+            <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
+            <input type="radio" name="star" id="star2" value="2"><label for="star2"></label>
+            <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
+            <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
+            <input type="radio" name="star" id="star5" value="5"><label for="star5"></label>
+        </div>
+  
+
+        <button onclick="submitFeedback()">Submit</button>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
